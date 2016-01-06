@@ -1,0 +1,28 @@
+
+      <!--<script src="http://cdn.pubnub.com/pubnub-3.7.18.min.js"></script>-->
+
+<html>
+  <head>
+    <title>Hi Genio!<BR></title>
+  </head>
+  <body>
+    <script src="https://cdn.pubnub.com/pubnub-dev.js"></script>
+    <script charset="utf-8">
+
+    var p = PUBNUB.init({
+        publish_key: 'pub-c-aa2f1e03-9bbb-461a-a5b5-465dae5cdd25',
+        subscribe_key: 'sub-c-76ff9162-af54-11e5-a8f0-0619f8945a4f'
+    });
+
+    p.subscribe({
+    channel: 'zentrela_channel',
+    message: function(m){console.log(m)}
+	});
+
+    p.publish({channel: 'zentrela_channel', message: 'Hola Pubnub!!'});
+
+</script>
+    </script>
+  </body>
+</html>
+
